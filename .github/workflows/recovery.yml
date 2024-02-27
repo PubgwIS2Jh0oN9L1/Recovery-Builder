@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
-  DEVICE: KD7
+  MANIFEST: https://github.com/twrpdtgen/android_device_samsung_m22/tree/m22jvxx-user-12-SP1A.210812.016-M225FVXXU4BVI8-release-keys -b twrp-10.0-deprecated
+  DEVICE: m22
   DT_LINK: https://github.com/mastersenpai0405/recovery_device_tecno_KD7
-  DT_PATH: device/tecno/KD7
+  DT_PATH: device/samsung/m22
   TARGET: recoveryimage
   TZ: Asia/manila
 
@@ -63,6 +63,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
           tag_name: TWRP_10.0
-          name: TWRP-KD7
+          name: TWRP-m22
           files: | 
             work/out/target/product/KD7/recovery.img
